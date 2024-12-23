@@ -40,7 +40,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.WebDriver.TargetLocator.*;
 
 
-public class Tester{
+/*public class Tester{
 	
 	WebDriver driver;
     String s = "clubhouse";
@@ -416,7 +416,7 @@ public class Tester{
 	driver.switchTo().window(parent);
 	 
 	}
-*/
+
 @Test(priority=13)
 public void signup13 () throws IOException, AWTException, InterruptedException,NoAlertPresentException
 {
@@ -584,7 +584,7 @@ public void signup17 () throws IOException, AWTException, InterruptedException,N
        driver.findElement(By.xpath("//input[@placeholder='Enter Verification Code']")).sendKeys(l);
        driver.findElement(By.xpath("//input[@placeholder='Enter Verification Code']")).sendKeys(Keys.ENTER); 
 }
-
+*/
 
 }
 

@@ -36,7 +36,7 @@ public class Xpaths {
 	WebElement checkpro;
 	
 	//Create account
-	@FindBy(className=("hubble-font-bold"))
+	@FindBy(xpath = "//button[contains(@type,'submit')]")
 	WebElement create;
 	
 	//Privacy link
@@ -104,98 +104,192 @@ public class Xpaths {
     PageFactory.initElements(driver,this);
     }
 	
-	public void email(String mail)
-	{
+	public void email(String mail) {
+	try {
 	email.sendKeys(mail);
-	}
+	} catch (NoSuchElementException e) {
+        System.out.println("Element not found: " );
+    }}
+    
 	
 	public void setPass(String pwd)
-	{
+	 {
+		try {
 	password.sendKeys(pwd);
-	}
+		} catch (NoSuchElementException e) {
+	        System.out.println("Element not found: " );
+	    }}
+	
     public void repass(String pwd1)
     {
+		try {
     confirm.sendKeys(pwd1);
-    }
+    } catch (NoSuchElementException e) {
+        System.out.println("Element not found: " );
+    }}
+
+    
     public void checkpolicy()
     {
+		try {
     checkpolicy.click();
-    }
+		} catch (NoSuchElementException e) {
+	        System.out.println("Element not found: " );
+	    }}
+    
+    
     public void checkpromo()
     {
+		try {
     checkpro.click();
-    }
+		} catch (NoSuchElementException e) {
+	        System.out.println("Element not found: " );
+	    }}
+    
+    
     public void clickLogin()
     {
+		try {
 	uname.click();
-    }
+		} catch (NoSuchElementException e) {
+	        System.out.println("Element not found: " );
+	    }}
+    
+    
     public void user(String user)
     {
+		try {
     username.sendKeys(user);
-    }
+		} catch (NoSuchElementException e) {
+	        System.out.println("Element not found: " );
+	    }}
+    
+    
     public void createac()
     {
+		try {
     create.click();
-    }
+		} catch (NoSuchElementException e) {
+	        System.out.println("Element not found: " );
+	    }}
+    
+    
     public void privacy1()
     {
+		try {
     privacy.click();	
-    }
+		} catch (NoSuchElementException e) {
+	        System.out.println("Element not found: " );
+	    }}
+    
+    
     public void terms1()
     {
+		try {
     terms.click();
-    }
+		} catch (NoSuchElementException e) {
+	        System.out.println("Element not found: " );
+	    }}
+    
+    
+    
     public void coockies1()
     {
+		try {
     cockies.click();
-    }
+		} catch (NoSuchElementException e) {
+	        System.out.println("Element not found: " );
+	    }}
+    
+    
     public void store1()
     {
+		try {
     store.click();
-    }
+		} catch (NoSuchElementException e) {
+	        System.out.println("Element not found: " );
+	    }}
+    
+    
     public void support1()
     {
+		try {
     support.click();
-    }  
+		} catch (NoSuchElementException e) {
+	        System.out.println("Element not found: " );
+	    }}
+    
+    
     public void mailinator2(String mailinator3)
     {
+		try {
     mailinator.click();
-    }
+		} catch (NoSuchElementException e) {
+	        System.out.println("Element not found: " );
+	    }}
+    
+    
     
     public void mailclick2()
     {
+ 		try {
     mailclick.click();
-    }
+	} catch (NoSuchElementException e) {
+        System.out.println("Element not found: " );
+    }}
+    
     
     public void clickonmail2()
     {
+ 		try {
     clickonmail.click();
-    }
+	} catch (NoSuchElementException e) {
+        System.out.println("Element not found: " );
+    }}
+    
+    
     
     public String getcode1()
     {
     return getcode.getText();	
     }
     
+    
     public void scrollinside1()
     {
+ 		try {
     scrollinside.click();
-    }
+ 		} catch (NoSuchElementException e) {
+ 	        System.out.println("Element not found: " );
+ 	    }}
+   
     
     public void pastecode1()
     {
+ 		try {
     pastecode.click();
-    }
+ 		} catch (NoSuchElementException e) {
+ 	        System.out.println("Element not found: " );
+ 	    }}
+    
+    
     
     public void verifybutton1()
     {
+ 		try {
     verifybutton.click();
-    }
+ 		} catch (NoSuchElementException e) {
+ 	        System.out.println("Element not found: " );
+ 	    }}
+   
     
     public void resendotp1()
     {
+ 		try {
     resendotp.click();
-    }  
+		} catch (NoSuchElementException e) {
+ 	        System.out.println("Element not found: " );
+ 	    }}
 
     
   

@@ -46,7 +46,7 @@ public class Tester{
     String s = "clubhouse";
     long d = System.currentTimeMillis();
     String username=(s + d );
-	
+	/*
 	@Test(priority=1)
 	public void signup1() throws IOException, AWTException, InterruptedException,NoAlertPresentException
 	{
@@ -85,18 +85,23 @@ public class Tester{
 		  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		   
 	}
-	
+	*/	
 
 	
 //case2	     
 		   // myObj = new Main(); // Create an object of Main
 		   // myObj.myPublicMethod();
 	
-	@Test(priority=2)
+@Test(priority=2)
 	public void signup2() throws IOException, AWTException, InterruptedException,NoAlertPresentException
 	{
-		driver.navigate().refresh();		   
-		   Xpaths obj=new Xpaths(driver);
+	   System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");	
+	   driver =new ChromeDriver();
+	    
+	   driver.get("https://app.hubbleconnected.com/");
+	   Xpaths obj=new Xpaths(driver);
+		driver.navigate().refresh();
+		   obj.clickLogin();
 		   obj.user("User");
 		   obj.email("lang3656565@gmail.com");
 		   obj.setPass("Qwerty123");
@@ -476,7 +481,7 @@ public void signup30 () throws IOException, AWTException, InterruptedException,N
 }
 
 
-@Test(priority=16)
+/* @Test(priority=16)
 public void signup16 () throws IOException, AWTException, InterruptedException,NoAlertPresentException
 {
 	driver.navigate().refresh();
@@ -585,7 +590,7 @@ public void signup17 () throws IOException, AWTException, InterruptedException,N
        driver.findElement(By.xpath("//input[@placeholder='Enter Verification Code']")).sendKeys(Keys.ENTER); 
 }
 
-
+*/
 }
 
 
